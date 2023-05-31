@@ -220,9 +220,11 @@ To summarize, synchronization prevents race conditions by providing mutual exclu
 
     exercise 9
 
-    A multithreaded network server program often uses many times more threads than the number of available processors due to several reasons:
+    A multithreaded network server program often uses many times more threads than the number of available
+    processors due to several reasons:
 
-    1. Scalability: By using more threads than available processors, the server program can take advantage of parallelism and achieve better scalability. This allows the program to handle a larger number of concurrent client requests efficiently. Each thread can be responsible for handling a specific client request or task, and by having more threads, the server can process multiple requests simultaneously.
+    1. Scalability: By using more threads than available processors, the server program can take advantage of
+    parallelism and achieve better scalability. This allows the program to handle a larger number of concurrent client requests efficiently. Each thread can be responsible for handling a specific client request or task, and by having more threads, the server can process multiple requests simultaneously.
 
     2. I/O Operations: In network server programs, a significant portion of the time is spent waiting for I/O operations to complete, such as reading from or writing to network sockets or accessing the file system. While waiting for I/O, a thread can be idle, not utilizing the processor's resources. By having more threads than available processors, the server can keep other threads busy performing useful work while some threads are waiting for I/O operations to complete. This helps to maximize the CPU utilization.
 

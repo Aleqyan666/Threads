@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Thread first = new Prioritizer.ThreadEstablisher("T1", Thread.MAX_PRIORITY);
@@ -11,5 +14,7 @@ public class Main {
         third.start();
 
         FirstQuest.generate().start();
+
+        List<Thread> list = new ArrayList<>();
     }
 }
